@@ -5,12 +5,17 @@
 
 ## Cómo se trabaja acá (aplica antes que cualquier otra cosa)
 
+- **La frontera es tuya, el código es mío.** Alcance, límites y fronteras — qué entra y qué no, qué
+  se niega a hacer la librería, dónde termina su responsabilidad, qué se borra, qué promete el
+  contrato — son decisiones del usuario y **se preguntan**. La implementación, los nombres, la
+  estructura, los tests y la verificación son del agente: se hacen, no se consultan.
+- **El tell, porque una decisión de frontera casi nunca parece una.** Si la respuesta a *"¿por qué
+  así?"* es un **principio**, saliste del código y estás moviendo un límite → preguntá. Si es una
+  **técnica**, decidí y seguí.
+  *"Uso un Map porque el lookup es O(1)"* → técnica, mío.
+  *"Devuelvo `null` porque no adivinamos"* → principio, tuyo.
 - ❌ NEVER meter código sin análisis previo. Si algo no queda claro, **se pregunta** — no se elige
   la interpretación más razonable y se sigue.
-- **La línea.** Se decide solo: nombres, ubicación de archivos, forma del test, redacción. Se
-  **pregunta siempre** ante: (a) cambio de comportamiento observable para alguien que ya usa esto,
-  (b) borrar o reemplazar contenido existente, (c) elegir entre dos semánticas defendibles,
-  (d) mover superficie pública.
 - ✅ ALWAYS **el contexto que aporta el usuario se convierte en test**, no en doc. Un hecho de
   comportamiento — *"esto ya está en producción"*, *"siempre funcionó así"*, *"no cambies esto"* —
   se fija con un test cuyo **nombre** lo enuncia. Un doc se lee si alguien lo busca; un test falla
