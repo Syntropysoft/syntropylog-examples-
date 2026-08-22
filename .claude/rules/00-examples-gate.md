@@ -3,6 +3,22 @@
 > Ficha que consumen las skills `/sl-*` (nivel usuario). El método vive en la skill; los hechos de
 > este repo, acá. Sin esta ficha, la skill se detiene.
 
+## Cómo se trabaja acá (aplica antes que cualquier otra cosa)
+
+- ❌ NEVER meter código sin análisis previo. Si algo no queda claro, **se pregunta** — no se elige
+  la interpretación más razonable y se sigue.
+- **La línea.** Se decide solo: nombres, ubicación de archivos, forma del test, redacción. Se
+  **pregunta siempre** ante: (a) cambio de comportamiento observable para alguien que ya usa esto,
+  (b) borrar o reemplazar contenido existente, (c) elegir entre dos semánticas defendibles,
+  (d) mover superficie pública.
+- ✅ ALWAYS **el contexto que aporta el usuario se convierte en test**, no en doc. Un hecho de
+  comportamiento — *"esto ya está en producción"*, *"siempre funcionó así"*, *"no cambies esto"* —
+  se fija con un test cuyo **nombre** lo enuncia. Un doc se lee si alguien lo busca; un test falla
+  cuando alguien lo contradice, sin que nadie recuerde la conversación.
+- ❌ NEVER afirmar una negación ("no existe X") sin decir **dónde** se buscó.
+- ❌ NEVER borrar porque el archivo destino existe. ✅ ALWAYS comparar **contenido**.
+- ❌ NEVER una sonda manual como evidencia: o se vuelve test, o se dice "verificado a mano, sin test".
+
 ## Qué es
 
 23 ejemplos ejecutables (`00`–`22`) de SyntropyLog. Cada uno es un paquete independiente con su
