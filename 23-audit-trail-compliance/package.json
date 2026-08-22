@@ -1,0 +1,21 @@
+{
+  "name": "23-audit-trail-compliance",
+  "version": "1.0.0",
+  "description": "SyntropyLog 1.5.0 + 2.0.0 — masking.exemptTransports and the retention bridge, written to JSON files you can diff",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "clean": "rm -rf dist out",
+    "build": "tsc",
+    "start": "npm run build && node dist/index.js",
+    "dev": "tsx src/index.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "tsx": "^4.0.0"
+  },
+  "dependencies": {
+    "syntropylog": "2.0.0"
+  }
+}
